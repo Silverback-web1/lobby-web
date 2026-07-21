@@ -1,0 +1,60 @@
+.status {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.postPicker {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+}
+
+.postChip {
+  font: inherit;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.postChip[data-active='true'] {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.rowText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gameLine {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-sm);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-sm);
+}

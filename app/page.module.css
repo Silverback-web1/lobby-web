@@ -1,0 +1,306 @@
+.page {
+  font-family: var(--font-body);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ── Header ─────────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) 0;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: none;
+  gap: var(--space-lg);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.nav a:hover {
+  color: var(--text-primary);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.navCta {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-on-brand);
+  background: var(--brand);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+}
+
+@media (min-width: 720px) {
+  .nav { display: flex; }
+  .navCta { display: inline-block; }
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+
+.hero {
+  display: grid;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0 var(--space-xxl);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    padding: var(--space-xxl) 0;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-md);
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 46ch;
+  margin: 0 0 var(--space-lg);
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-on-brand);
+  background: var(--brand);
+  padding: 13px 24px;
+  border-radius: var(--radius-md);
+  transition: background 0.15s ease;
+}
+
+.primaryBtn:hover {
+  background: var(--brand-dark);
+}
+
+.ghostBtn {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--surface-border);
+  padding: 13px 24px;
+  border-radius: var(--radius-md);
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Steps ──────────────────────────────────────────────────────────── */
+
+.steps {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--surface-border);
+}
+
+@media (min-width: 720px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stepNumber {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+}
+
+.stepBody {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ── Pricing ────────────────────────────────────────────────────────── */
+
+.pricing {
+  padding: var(--space-xxl) 0;
+  border-top: 1px solid var(--surface-border);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-xs);
+}
+
+.pricingSub {
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-xl);
+}
+
+.tierGrid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 720px) {
+  .tierGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tierCard {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.tierCard[data-featured='true'] {
+  border-color: var(--brand);
+}
+
+.tierBadge {
+  position: absolute;
+  top: -11px;
+  left: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background: var(--brand);
+  color: var(--text-on-brand);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.tierName {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.tierPrice {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-md);
+}
+
+.tierFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tierFeatures li::before {
+  content: '✓';
+  color: var(--brand);
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.navLoginLink {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 720px) {
+  .navLoginLink { display: inline-block; }
+}
+
+.tierCta {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 11px;
+  border-radius: var(--radius-md);
+  background: var(--surface-high);
+  color: var(--text-primary);
+  margin-top: var(--space-sm);
+}
+
+.tierCard[data-featured='true'] .tierCta {
+  background: var(--brand);
+  color: var(--text-on-brand);
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-lg) 0 var(--space-xl);
+  border-top: 1px solid var(--surface-border);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footerLinks {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footerLinks a:hover {
+  color: var(--text-secondary);
+}

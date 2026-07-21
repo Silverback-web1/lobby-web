@@ -1,0 +1,67 @@
+.title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 var(--space-lg);
+}
+
+.label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: var(--space-md) 0 8px;
+}
+
+.select {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 11px 14px;
+  background: var(--surface-high);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--brand);
+}
+
+.rangeRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.pillRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--space-sm);
+}
+
+.pill {
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.pill[data-active='true'] {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--text-on-brand);
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin: var(--space-sm) 0;
+}

@@ -1,0 +1,118 @@
+.hero {
+  text-align: center;
+  padding: var(--space-lg) 0 var(--space-xl);
+}
+
+.avatarLarge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--brand-light);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 auto var(--space-md);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 0 0 4px;
+}
+
+.email {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-sm);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin: var(--space-xl) 0 var(--space-sm);
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.gameCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameText {
+  display: flex;
+  flex-direction: column;
+}
+
+.rank {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.blockedRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-sm);
+}
+
+.tierGrid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 560px) {
+  .tierGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tierCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.tierCard[data-active='true'] {
+  border-color: var(--brand);
+}
+
+.tierName {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.tierPrice {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 4px 0 var(--space-sm);
+}
+
+.tierFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.tierFeatures li::before {
+  content: '✓';
+  color: var(--brand);
+  margin-right: 6px;
+}

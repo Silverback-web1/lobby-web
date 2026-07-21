@@ -1,0 +1,100 @@
+/* Color tokens mirror src/theme/palette.ts in the iOS app 1:1 — if you
+   change a hex value here, change it there too (and vice versa) so the app
+   and website never drift apart. */
+
+:root {
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-xxl: 72px;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a0a0f;
+  --surface: #15151d;
+  --surface-high: #1d1d28;
+  --surface-border: #2a2a38;
+
+  --text-primary: #f2f1f7;
+  --text-secondary: #9e9db0;
+  --text-muted: #67667a;
+  --text-on-brand: #ffffff;
+
+  --brand: #8b5cf6;
+  --brand-dark: #6d3fd1;
+  --brand-light: #3d2f63;
+
+  --accent: #f0b429;
+  --accent-light: #3a2e12;
+
+  --success: #34c795;
+  --success-light: #123527;
+  --danger: #ef5a5a;
+  --danger-light: #3a1717;
+}
+
+:root[data-theme='light'] {
+  --bg: #f6f5fa;
+  --surface: #ffffff;
+  --surface-high: #f0eef7;
+  --surface-border: #e1dfea;
+
+  --text-primary: #17161f;
+  --text-secondary: #5c5a6e;
+  --text-muted: #918fa0;
+  --text-on-brand: #ffffff;
+
+  --brand: #7c3aed;
+  --brand-dark: #6425c4;
+  --brand-light: #ede6fc;
+
+  --accent: #b9790a;
+  --accent-light: #fcefd4;
+
+  --success: #0f9d63;
+  --success-light: #e1f7ed;
+  --danger: #d4373a;
+  --danger-light: #fbe7e7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

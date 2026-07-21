@@ -1,0 +1,26 @@
+.group {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--surface-high);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-pill);
+  gap: 2px;
+}
+
+.option {
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.option[data-active='true'] {
+  background: var(--brand);
+  color: var(--text-on-brand);
+}

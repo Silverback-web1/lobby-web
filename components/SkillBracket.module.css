@@ -1,0 +1,108 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 28px 20px 20px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+.rowLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  width: 52px;
+  flex-shrink: 0;
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  height: 8px;
+  background: var(--surface-high);
+  border-radius: var(--radius-pill);
+}
+
+.range {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: var(--radius-pill);
+}
+
+.range[data-variant='you'] {
+  background: var(--brand);
+  opacity: 0.55;
+}
+
+.range[data-variant='them'] {
+  background: var(--brand);
+  opacity: 0.3;
+}
+
+.overlapLayer {
+  position: relative;
+  height: 0;
+}
+
+.overlapZone {
+  position: absolute;
+  top: -44px;
+  height: 40px;
+  border-left: 1.5px dashed var(--accent);
+  border-right: 1.5px dashed var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.8); opacity: 0.4; }
+}
+
+.readout {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--surface-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.readoutLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.readoutValue {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}

@@ -26,7 +26,7 @@ const TIERS = [
 ];
 
 const STEPS = [
-  { n: '01', title: 'Post what you\u2019re looking for', body: 'Pick a game, rate your own skill, and set the range you\u2019re willing to play with. Takes under a minute.' },
+  { n: '01', title: 'Post what you’re looking for', body: 'Pick a game, rate your own skill, and set the range you’re willing to play with. Takes under a minute.' },
   { n: '02', title: 'Get matched or browse', body: 'The board ranks compatible players automatically, or scroll and reach out to anyone yourself.' },
   { n: '03', title: 'Chat and squad up', body: 'Message right in the app, agree on a time, and go play. No skill gate at the door.' },
 ];
@@ -53,7 +53,7 @@ export default function Home() {
             <span className={styles.eyebrow}>MATCHMAKING, NOT TRYOUTS</span>
             <h1 className={styles.h1}>Find your next teammate,<br />not a tryout.</h1>
             <p className={styles.heroSub}>
-              Post what you\u2019re looking for and get matched by skill range \u2014 automatically,
+              Post what you’re looking for and get matched by skill range — automatically,
               or by browsing the board yourself. Every skill level welcome, every time.
             </p>
             <div className={styles.heroActions}>
